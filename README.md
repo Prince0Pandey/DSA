@@ -32,7 +32,7 @@ Examples : Set, Dictionary, Tree, Graph
 
 **Big O Notation**  
 O(1)     : Constant Time  
-O(N)     : Linear Time
-O(logN)  : Logarithmic Time
+O(N)     : Linear Time  
+O(logN)  : Logarithmic Time  
 O(NlogN) : QuasiLinear Time  
 O(N^2)   : Quadratic Time
