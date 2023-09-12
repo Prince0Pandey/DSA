@@ -7,19 +7,19 @@ time and space complexity of empty array: O(1)
 
 non-Empty array using array module --> my_array1 = arr.array('i',[1,2,3,4,5,6,7,8])
 time and space complexity of non-empty array with N element: O(N)
-time taken to copy element to newly created array depends on N i.e number of element
+time taken to copy element of a list to newly created array depends on N i.e number of element
 """
 
 import array as nw
 
-my_array = nw.array('i',[1,2,3,4,5])
-print("Before Insertion : ",my_array)
+my_array = nw.array('i', [1, 2, 3, 4, 5])
+print("Before Insertion : ", my_array)
 
-my_array.insert(0,0)
-print("After Insertion : ",my_array)
+my_array.insert(0, 0)
+print("After Insertion : ", my_array)
 
-my_array.insert(-9,-1)          # If array index is -ve and out of bound then the element is inserted at first position
-my_array.insert(99,6)           # If array index is +ve and out of bound then the element is inserted at last position
+my_array.insert(-9, 20)     # If array index is -ve and out of bound then the element is inserted at first position
+my_array.insert(99, 200)    # If array index is +ve and out of bound then the element is inserted at last position
 print(my_array)
 
 # Time complexity of inserting an element: O(N)
@@ -64,15 +64,15 @@ print(linear_search(my_array,64))
 # Space complexity of linear_search(): O(1)
 
 """Deleting an Element from array using remove"""
-my_array.remove(-1)
+my_array.remove(200)
 # Time complexity:  O(N)
 # Space complexity: O(1)
 
 # 1. Create an array and traverse.
 print("Step 01")
-my_array1 = nw.array("i",[12,23,34,45,56,67,78,89,90])
+my_array1 = nw.array("i", [12, 23, 34, 45, 56, 67, 78, 89, 90])
 for i in my_array1:
-    print(i,end=" ")
+    print(i, end=" ")
 print()
 
 # 2. Append any value to the array using append() method
@@ -82,18 +82,18 @@ print(my_array1)
 
 # 3. Insert value in an array using insert() method
 print("Step 03")
-my_array1.insert(0,110)
+my_array1.insert(0, 110)
 print(my_array1)
 
 # 4. Extend python array using extend() method
 print("Step 04")
-my_array2 = nw.array('i',[120,130,140,150])
+my_array2 = nw.array('i', [120, 130, 140, 150])
 my_array1.extend(my_array2)
 print(my_array1)
 
 # 5. Add items from list into array using fromlist() method
 print("Step 05")
-lst = [160,170,180]
+lst = [160, 170, 180]
 my_array1.fromlist(lst)
 print(my_array1)
 
@@ -107,7 +107,7 @@ print("Step 07")
 my_array1.pop()
 print(my_array1)
 
-# 8. Fetch any element through its index using index() method
+# 8. Fetch any element's index using index() method
 print("Step 08")
 print(my_array1.index(120))         # Gives index of element 120
 
@@ -129,8 +129,8 @@ print("Step 13")
 lst = list(my_array1)
 print(lst)
 
-# 15. Slice Elements from an array
-print("Step 15")
+# 14. Slice Elements from an array
+print("Step 14")
 new0 = my_array1[0:5:2]
 print(new0)
 
