@@ -14,7 +14,7 @@ print(twoDArray)
 
 
 """insertion of element using insert method in row"""
-# newTwoDArray = np.insert(twoDArray,0,[[1,2,3,4]], axis=0)       # 0:index at which we insert, Array, axis = 0:row, 1:column
+# newTwoDArray = np.insert(twoDArray,0,[[1,2,3,4]], axis=0)  # 0:index at which we insert, Array, axis = 0:row, 1:column
 # print(newTwoDArray)
 
 
@@ -24,11 +24,14 @@ print(twoDArray)
 
 
 """insertion of element using append method in row"""
+"""If we want to append in a row same number of column should present in array which is going to be added"""
 # newTwoDArray = np.append(twoDArray, [[101,102,103,104]], axis=0)
 # print(newTwoDArray)
 
 
 """insertion of element using append method in column"""
+"""If we want to append in a column same number of row should present in array which is going to be added
+   here the added array have dimension of 1x4 i.e 1 row and 4 column and 'twoDArray' have dimension of 4x4"""
 # newTwoDArray = np.append(twoDArray, [[101,102,103,104]], axis=1)
 # print(newTwoDArray)
 
@@ -38,8 +41,8 @@ Above code will give an error because the dimensions of the arrays that you're t
 To append to a 2D array along axis=1 (which means appending columns), the new array must have the same number of rows
 as the original 2D array.
 
-Your 'twoDArray' has not been defined in the code snippet you provided, so I will assume it's a 2D array with 'n' rows. 
-The array you're trying to append ([[101,102,103,104]]) only has one row.
+'twoDArray' have 'n' rows and 'n' column. 
+The array you're trying to append ([[101,102,103,104]]) only has one row. i.e 1x4
 
 If you want to append this new array as a column to your existing 2D array, you need to reshape it to have 'n' rows and
 1 column.

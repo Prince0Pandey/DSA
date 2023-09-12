@@ -22,6 +22,7 @@
 
 # 1. Inserting an element to the beginning of the list
 
+# mylst = [1, 2, 3, 4, 5, 6, 7, 8]
 # mylst[0] = "Tree"
 # print(mylst)
 
@@ -31,6 +32,7 @@
 
 # 2. Inserting an element to any given place of the list
 
+# mylst = [1, 2, 3, 4, 5, 6, 7, 8]
 # mylst.insert(6, "House")
 # print(mylst)
 
@@ -40,6 +42,7 @@
 
 # 3. Inserting an element to the end of the list
 
+# mylst = [1, 2, 3, 4, 5, 6, 7, 8]
 # mylst.append("DSA")
 # print(mylst)
 
@@ -47,8 +50,9 @@
 # Space Complexity: O(1)
 
 
-# 4. Inserting another list to the list
+# 4. Inserting another list to the list using extend()
 
+# mylst = [1, 2, 3, 4, 5, 6, 7, 8]
 # mynewlst = [9,10,11,12]
 # mylst.extend(mynewlst)
 # print(mylst)
