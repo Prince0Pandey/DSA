@@ -51,10 +51,11 @@ List methods for deletion
 # * Operator: repeat the list element Lists
 # a = [1, 0]
 # a *= 2
-# print(a)
+# print(a)      # [1, 0, 1, 0]
 
 
 a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 # 1.max(): returns the item with the highest value in the list
 print(f"Maximum: {max(a)}")
 
@@ -64,25 +65,32 @@ print(f"Minimum: {min(a)}")
 # 3.sum(): returns the sum of all the items in the list
 print(f"Sum: {sum(a)}")
 
+# Average of list
 print(f"Average: {sum(a) / len(a)}")
 
 """Strings and List"""
+
+print("Step 01")
 a = "spam"
 b = list(a)
 print(b)
 
+print("Step 02")
 x = "spam spam spam"
 y = x.split()  # if not specified then by default takes space as a seperator
 print(y)
 
+print("Step 03")
 m = "spam-spam-spam"
 n = m.split("-")
 print(n)
 
+print("Step 04")
 delimiter = "a"
 o = m.split(delimiter)
 print(o)
 
+print("Step 05")
 # o = ['sp', 'm-sp', 'm-sp', 'm']
 print(delimiter.join(o))  # join will joint the list into one string
 
@@ -121,7 +129,7 @@ print(delimiter.join(o))  # join will joint the list into one string
 
 myList = [4, 6, 1, 7, 3, 0, 8, 2, 5, 9]
 
-# 1.sort() does not return any value, therefore it will print 'None'
+"""1. sort() does not return any value, therefore it will print 'None'"""
 # print(myList.sort())
 
 # myList.append(10)                       # will append 10
@@ -133,13 +141,13 @@ myList = [4, 6, 1, 7, 3, 0, 8, 2, 5, 9]
 # myList = myList + [10]                  # will append 10
 # print(myList)
 
-# 2. Store the original list using temporary variable
+"""2. Store the original list using temporary variable"""
 # temp = myList[:]
 # temp.sort()
 # print(f"original list: {myList}")
 # print(f"Sorted list: {temp}")
 
-# 3. if we don't want to change the original list we can use sorted()
+"""3. if we don't want to change the original list we can use sorted()"""
 # print(f"Temporary sorted list: {sorted(myList)}")
 # print(f"original list: {myList}")
 
@@ -147,14 +155,14 @@ myList = [4, 6, 1, 7, 3, 0, 8, 2, 5, 9]
 """Arrays vs Lists"""
 import numpy as np
 
-# 1. Arithmetic Operations: can be done on array not on list
+"""1. Arithmetic Operations: can be done on array not on list"""
 # myarray = np.array([1, 2, 3, 4, 5, 6])
 # newList = [1, 2, 3, 4, 5]
 # print(myarray/2)                    # will divide all values by 2
 #
 # print(newList/2)                    # will throw error
 
-# 2. Data Types: Array doesn't support multiple data types at a time but list does
+"""2. Data Types: Array doesn't support multiple data types at a time but list does"""
 # myarr = np.array([3, 4, 6, 1, 'a'])           # myarr will be changed to string from int
 # newlst = [9, 5, 6, 'a']
 # print(myarr)
@@ -195,12 +203,15 @@ import numpy as np
 # print(new_list)
 
 sentence = 'My name is Prince'
+
+
 def is_consonant(letter):
     vowels = 'aeiou'
     return letter.isalpha() and letter.lower() not in vowels        # returns True or False
 
+
 consonants = [i for i in sentence if is_consonant(i)]
-print(consonants)
+print("Consonant in a string:", consonants)
 
 
 """Conditional List Comprehension"""
