@@ -17,7 +17,7 @@ my_dict1 = {"name": "Prince", "Age": "21"}
 print(my_dict1)
 
 my_dict1["Age"] = 23
-my_dict1["Address"] = "Mumbai"
+my_dict1["Address"] = "Mumbai"              # if key is not present then it will add new key-value pair to end
 print(my_dict1, "\n")
 
 print("Traversing Dictionary")
@@ -54,6 +54,6 @@ remove_element = person.popitem()     # popitem() will pop the last element and 
 print("Removed Element:", remove_element)
 print(person, "\n")
 
-person.clear()      # will clear the dictionary with no element / O(N):N means number of key,value pairs in dict
+person.clear()      # will clear the dictionary / O(N):N means number of key,value pairs in dict
 print(person, "\n")
 
