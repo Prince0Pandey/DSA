@@ -36,8 +36,21 @@ when key does not present in dict then value will be printed(value is optional P
 print("Get Method")
 print(person1.get("branch", "key does not exist"))  # if key present in dict then return its value
 print(person1.get("city", "key does not exist"))
-print(person1.get("city"),  "\n")    # returns None as 'Value' parameter is not provided & key 'city' is not present
+print(person1.get("tiger"),  "\n")    # returns None as 'Value' parameter is not provided & key 'city' is not present
 
+
+"""
+setdefault()
+dictionary.setdefault(key, default_value) -> returns value if key is present in dict else add the key in dict 
+with value as 'None' if optional parameter i.e default_value not passed
+"""
+print("SetDefault Method")
+print(person1.setdefault("name", "Added"))
+# As name key present in dict it returns value
+print(person1.setdefault("city", "Added"))
+# As city key is not present in dict it will add ('city':'Added') in dict and returns 'Added'
+print(person1.setdefault("place"), "\n")
+# As city key is not present in dict it will add ('city':None) in dict as default_value not provided and return None
 
 """
 items()
@@ -61,20 +74,6 @@ dictionary.values() -> returns list of values
 """
 print("Values Method")
 print(person1.values(), "\n")
-
-
-"""
-setdefault()
-dictionary.setdefault(key, default_value) -> returns value if key is present in dict else add the key in dict 
-with value as 'None' if optional parameter i.e default_value not passed
-"""
-print("SetDefault Method")
-print(person1.setdefault("name", "Added"))
-# As name key present in dict it returns value
-print(person1.setdefault("city", "Added"))
-# As city key is not present in dict it will add ('city':'Added') in dict and returns 'Added'
-print(person1.setdefault("place"), "\n")
-# As city key is not present in dict it will add ('city':None) in dict as default_value not provided and return None
 
 
 """
