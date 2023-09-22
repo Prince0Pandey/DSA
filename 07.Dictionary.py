@@ -47,11 +47,11 @@ print(person)
 deleted_element = person.pop("education", None)
 # if key error occurs it will print none and doesn't break the code
 # pop() will only return value not key
-print("Deleted Element value:", deleted_element, "\n")
+print("Deleted Element (value):", deleted_element, "\n")
 print(person, "\n")
 
 remove_element = person.popitem()     # popitem() will pop the last element and returns key:value pair
-print("Removed Element:", remove_element)
+print("Removed Element(key:value):", remove_element)
 print(person, "\n")
 
 person.clear()      # will clear the dictionary / O(N):N means number of key,value pairs in dict
