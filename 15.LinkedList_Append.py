@@ -1,6 +1,3 @@
-"""Inserting Element at the end of the SLL"""
-
-
 class Node:
     def __init__(self, value):
         self.value = value
@@ -24,8 +21,8 @@ class LinkedList:
             temp_node = temp_node.next
         return result
 
+    """Inserting Element at the end of the SLL"""
     def append(self, value):
-
         new_node = Node(value)
         if self.head is None:
             self.head = new_node
@@ -36,9 +33,22 @@ class LinkedList:
             self.tail = new_node
         self.length += 1
 
+    """Inserting Element at the beginning of the SLL"""
+    def prepend(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            new_node.next = self.head
+            self.head = new_node
+        self.length += 1
+
 new_linked_list = LinkedList()
 new_linked_list.append(10)
 new_linked_list.append(20)
 new_linked_list.append(30)
+print(new_linked_list)
 
+new_linked_list.prepend(40)
 print(new_linked_list)
