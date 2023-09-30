@@ -58,6 +58,13 @@ class LinkedList:
             new_node.next = self.head
             self.head = new_node
 
+        elif index == self.length:
+            temp = self.head
+            for _ in range(index-1):
+                temp = temp.next
+            temp.next = new_node
+            self.tail = new_node
+
         else:
             temp_node = self.head
             for _ in range(index - 1):          # Time Complexity: O(N)
