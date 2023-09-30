@@ -16,6 +16,8 @@ D. 1 1
 
 # Q-6. What will be the output of the following code snippet?
 data = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+
+
 def fun(m):
     v = m[0][0]
 
@@ -50,9 +52,11 @@ D. 12,13,14,15
 """
 
 # Q-8. What will be the output of the following code snippet?
-def f(i, values = []):
-    values.append(i)
-    print (values)
+
+
+def f(j, values=[]):
+    values.append(j)
+    print(values)
     return values
 f(1)
 f(2)
