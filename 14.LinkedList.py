@@ -35,7 +35,6 @@ class LinkedList:
         self.tail = None
         self.length = 0
 
-
 new_linked_list1 = LinkedList()
 print("Empty Linked List's Head Address:", new_linked_list1.head)
 print("Empty Linked List's Tail Address:", new_linked_list1.tail)
