@@ -23,7 +23,8 @@ def fun(m):
 
     for row in m:
         for element in row:
-            if v < element: v = element
+            if v < element:
+                v = element
 
     return v
 print(fun(data[0]))
@@ -43,7 +44,8 @@ arr = [[1, 2, 3, 4],
        [8, 9, 10, 11],
        [12, 13, 14, 15]]
 for i in range(0, 4):
-    print(arr[i].pop())
+    print(arr[i].pop(), end=" ")
+print()
 """
 A. 1 2 3 4
 B. 1 4 8 12

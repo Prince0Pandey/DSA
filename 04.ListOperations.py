@@ -1,6 +1,7 @@
-# myList = ['a', 'b', 'c', 'd', 'e', 'f']
-# myList[:2] = ['x', 'y']           #assigning 2 values at a time
-# print(myList[:])
+import numpy as np
+myList = ['a', 'b', 'c', 'd', 'e', 'f']
+myList[:2] = ['x', 'y']           # assigning 2 values at a time
+print(myList[:])
 
 """
 List methods for deletion
@@ -48,7 +49,7 @@ List methods for deletion
 # print(c)
 
 
-# * Operator: repeat the list element Lists
+# * Operator: repeat the list element
 # a = [1, 0]
 # a *= 2
 # print(a)      # [1, 0, 1, 0]
@@ -153,7 +154,6 @@ myList = [4, 6, 1, 7, 3, 0, 8, 2, 5, 9]
 
 
 """Arrays vs Lists"""
-import numpy as np
 
 """1. Arithmetic Operations: can be done on array not on list"""
 # myarray = np.array([1, 2, 3, 4, 5, 6])
@@ -163,10 +163,10 @@ import numpy as np
 # print(newList/2)                    # will throw error
 
 """2. Data Types: Array doesn't support multiple data types at a time but list does"""
-# myarr = np.array([3, 4, 6, 1, 'a'])           # myarr will be changed to string from int
-# newlst = [9, 5, 6, 'a']
-# print(myarr)
-# print(newlst)
+myarr = np.array([3, 4, 6, 1, 'a'])           # myarr will be changed to string from int
+newlst = [9, 5, 6, 'a']
+print(myarr)
+print(newlst)
 
 
 """List Comprehension"""
@@ -186,9 +186,9 @@ import numpy as np
 # print("Given List", lst)
 # print("Derived List using List Comprehension:", lst1)
 
-# language = "Python"
-# lst = [letter for letter in language]
-# print(lst)
+language = "Python"
+lst = [letter for letter in language]
+print(lst)
 
 
 """Conditional List Comprehension"""
@@ -202,14 +202,12 @@ import numpy as np
 # new_list = [number*number for number in given_list if number < 0]   # List of Square of negative number
 # print(new_list)
 
-sentence = 'My name is Prince'
-
 
 def is_consonant(letter):
     vowels = 'aeiou'
     return letter.isalpha() and letter.lower() not in vowels        # returns True or False
 
-
+sentence = 'My name is Prince'
 consonants = [i for i in sentence if is_consonant(i)]
 print("Consonant in a string:", consonants)
 

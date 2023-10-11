@@ -1,6 +1,8 @@
+import array as nw
 """
-NOTE: when we create empty array using numpy module or array module, No memory allocated to the array as there is no
-element, The only thing is going to created is 'np_array' object storing metadata of array.
+NOTE: when we create empty array using numpy module or array module, No memory allocated to 
+the array as there is no element, The only thing is going to create is 'np_array' object 
+storing metadata of array.
 
 Empty array using array module --> my_array = arr.array('i')
 time and space complexity of empty array: O(1)
@@ -10,12 +12,10 @@ time and space complexity of non-empty array with N element: O(N)
 time taken to copy element of a list to newly created array depends on N i.e number of element
 """
 
-import array as nw
-
 my_array = nw.array('i', [1, 2, 3, 4, 5])
 print("Before Insertion : ", my_array)
 
-my_array.insert(0, 0)
+my_array.insert(0, 10)
 print("After Insertion : ", my_array)
 
 my_array.insert(-9, 20)     # If array index is -ve and out of bound then the element is inserted at first position
@@ -26,40 +26,44 @@ print(my_array)
 # Space complexity of inserting an element: O(1)
 
 """
-NOTE:If we insert element at the index that is not in range of array index and +ve then it will add the element at the end
-of the array
-NOTE:If we insert element at the index that is not in range of array index and -ve then it will add the element at the start
-of the array
+NOTE:If we insert element at the index that is not in range of array index and +ve then it 
+will add the element at the end of the array
+NOTE:If we insert element at the index that is not in range of array index and -ve then it 
+will add the element at the start of the array
 Ex : my_array = nw.array('i',[1,2,3,4,5])
      my_array.insert(109,6)
      my_array.insert(-90,7)
 """
 
-# Array Traversal : to access each element stored in the array so that the data can be checked or used as part of a process.
+# Array Traversal : to access each element stored in the array so that the data can be checked
+# or used as part of a process.
+
 
 def array_traversal(array):
-    for i in array:
-        print(i, end=" ")
+    for j in array:
+        print(j, end=" ")
     print()
 array_traversal(my_array)
 # Time complexity of array_traversal(array): O(N)
 # Space complexity of array_traversal(array): O(1)      As no space is taken in function
 
-def accessElement(array,index):
-    if index >= len(array):
+
+def accessElement(array, index):
+    if index < 0 or index >= len(array):
         print("array index out of range")
     else:
         print(array[index])
-accessElement(my_array,90)
+accessElement(my_array, 90)
 # Time complexity of accessElement(): O(1)
 # Space complexity of accessElement(): O(1)
 
-def linear_search(array,target):
-    for i in range(len(array)):
-        if array[i] == target:
-            return i
-        return -1
-print(linear_search(my_array,64))
+
+def linear_search(array, target):
+    for k in range(len(array)):
+        if array[k] == target:
+            return k
+    return -1
+print(linear_search(my_array, 4))
 # Time complexity of linear_search(): O(N)
 # Space complexity of linear_search(): O(1)
 
@@ -104,7 +108,7 @@ print(my_array1)
 
 # 7. Remove last array element using pop() method
 print("Step 07")
-my_array1.pop()
+my_array1.pop()         # We can provide index inside pop
 print(my_array1)
 
 # 8. Fetch any element's index using index() method
@@ -144,7 +148,7 @@ new2 = my_array1[7:]
 print(new2)
 
 
-#Numpy module provides feature rich and high performance array object
+# Numpy module provides feature rich and high performance array object
 """
 Empty array using Numpy module --> np_array = np.array([], dtype=int)
 print(np_array)

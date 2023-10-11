@@ -1,18 +1,17 @@
-# lst = ["milk", "cheese", "butter", "rice"]
-# print("milk" in lst)        # in operator   prints True
-# print("bread" in lst)       # in operator   prints False
+lst = ["milk", "cheese", "butter", "rice"]
+print("milk" in lst)        # in operator   prints True
+print("bread" in lst)       # in operator   prints False
 
-# for i in range(len(lst)):
-#     lst[i] += "+"
-#     print(lst[i])
+for i in range(len(lst)):
+    lst[i] += "+"
+    print(lst[i])
 
 
 """Insertion in list"""
-
-# mylst = [1, 2, 3, 4, 5, 6, 7, 8]
-# mylst[3] = 12
-# mylst[5] = 9
-# print(mylst)
+mylst = [1, 2, 3, 4, 5, 6, 7, 8]
+mylst[3] = 12
+mylst[5] = 9
+print(mylst)
 
 # Time Complexity:  O(1)        # Time taken to insert an element is same therefore O(1)
 # Space Complexity: O(1)        # insertion does not require any space as memory is already reserved.
@@ -62,7 +61,6 @@
 
 
 '''Searching for an element in the list'''
-
 my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90]
 target = 500
 
@@ -76,12 +74,9 @@ else:
 
 # 2. Linear Search
 def linear_search(p_list:list, p_target:int):
-    for i, value in enumerate(p_list):          # O(N)
+    for j, value in enumerate(p_list):          # O(N)
         if value == p_target:                   # O(1)
-            return i                            # O(1)
+            return j                            # O(1)
     return -1                                   # O(1)
 print(linear_search(my_list, target))
-
 # Time Complexity: O(n)
-
-
